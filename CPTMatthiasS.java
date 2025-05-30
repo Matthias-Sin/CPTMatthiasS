@@ -14,11 +14,11 @@ public class CPTMatthiasS{
 		
 		while(true){ 
 			//set main menu background color
-			con.setDrawColor(new Color(128, 128, 128)); 
+			con.setDrawColor(new Color(80, 0, 40)); 
 			con.fillRect(0,0,1280,720); 
 			
 			BufferedImage logo = con.loadImage("Mc.jpg"); 
-			con.drawImage(logo, 540, 200); 
+			con.drawImage(logo, 0, 0); 
 			
 		}
 
