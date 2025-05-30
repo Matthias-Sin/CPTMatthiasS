@@ -1,1 +1,8 @@
-Math
+What is the equation of the axis of this equation f(x)= 2sin[4(x-180)]+3
+A)2
+B)3
+C)180
+D)-3
+B 
+
+

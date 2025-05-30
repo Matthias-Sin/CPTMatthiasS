@@ -4,7 +4,7 @@ B)Steve
 C)Tony
 D)Thor
 A
-Who is the first character who said "Love you 3000"? 
+Who is the first character who says "Love you 3000"? 
 A)Morgan Stark 
 B)Tony Stark
 C)Pepper Potts
@@ -14,6 +14,7 @@ Who is the current king of Wakanda?
 A)T'Challa
 B)Shuri
 C)Namor
+D)There is no king in Wakanda now
 D
 Is Loki a female or male?
 A)Yes
@@ -39,9 +40,24 @@ B)Steve
 C)Scott(Ant-Man)
 D)Strange
 A 
-
-
-
-
-
-
+What is the suit that Tony is wearing in Infinity War
+A)Mark 85
+B)Mark 45
+C)Mark 50
+D)Mark 55
+C
+What is the new name of the movie for Thunderbolds*
+A)*New Avengers
+B)*The New Avengers
+C)*New Avenger
+D)*The New Avenger
+B
+When is the Battle of New York happens? 
+A)1942
+B)2014
+C)1955
+D)2023
+E)A&B
+F)B&D
+G)Except C, all correct
+B
