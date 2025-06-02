@@ -6,11 +6,11 @@ import java.awt.Font;
 public class CPTMatthiasS{ 
 	public static void main(String[] args){ 
 		Console con = new Console(1280,720);
-		
 		//Create variables
 		int intX; 
 		int intY; 
-		
+		String strName; 
+		BufferedImage imglogo = con.loadImage("MClogo.png"); 
 		//load game textfile
 		TextInputFile MCU = new TextInputFile("MCU.txt"); 
 		//Math Questions = MQ
@@ -18,16 +18,22 @@ public class CPTMatthiasS{
 		TextInputFile Countries = new TextInputFile("Countries.txt"); 
 		//The secret game
 		TextInputFile secret = new TextInputFile("ItalianBrainrot.txt"); 
+		//set main menu background color
+		
+		//Ask name
+		con.println("Please enter your name"); 
+		strName = con.readLine(); 
 		
 		while(true){ 
-			//set main menu background color
-			con.setDrawColor(new Color(80, 0, 40)); 
-			con.fillRect(0,0,1280,720); 
 			
-			BufferedImage logo = con.loadImage(""); 
-			con.drawImage(logo, 0, 0); 
+			con.drawImage(imglogo, 120, 120); 
+			//con.setDrawColor(new Color(80, 0, 40)); 
+			//con.fillRect(0,0,1280,720); 
+			}
+
+
 			
-		}
+		
 
 		
 		
