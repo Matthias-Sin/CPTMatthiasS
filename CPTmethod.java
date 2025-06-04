@@ -5,6 +5,21 @@ public class CPTmethod{
 		Console con = new Console(); 
 		
 	}
+	
+	//public static String MCUG(String strRespond, String strAnswer){ 
+		
+		
+		//return Stranswer;
+
+					
+
+	
+			
+			
+			
+		
+		
+	//}
 }
 		
 

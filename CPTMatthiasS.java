@@ -11,6 +11,9 @@ public class CPTMatthiasS{
 		int intX; 
 		int intY; 
 		char chrStart; 
+		String strMCU; 
+		String strAnswer; 
+		String strRespond;
 		
 		chrStart = con.getChar();
 
@@ -33,9 +36,27 @@ public class CPTMatthiasS{
 			while(chrStart != 'p'|| chrStart != 'l'){
 				if(chrStart == 'p'){ 
 					System.out.println("Work");
-				}
 			}
 		}
+	}
+		//MCU game
+		//String StrQuestion;
+		//String StrA;
+		//String StrB;
+		//String StrC;
+		//String StrD;
+		//String Stranswer;
+		//while(MCU.eof() == false){ 
+			//StrQuestion = MCU.readLine(); 
+			//StrA = MCU.readLine(); 
+			//StrB = MCU.readLine(); 
+			//StrC = MCU.readLine();
+			//StrD = MCU.readLine(); 
+			//Stranswer = MCU.readLine(); 
+			//}
+		//strMCU = CPTmethod.MCUG(strAnswer, strRespond);
+		
+
 
 		
 		
