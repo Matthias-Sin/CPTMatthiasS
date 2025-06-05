@@ -15,8 +15,6 @@ public class CPTMatthiasS{
 		String strAnswer; 
 		String strRespond;
 		
-		chrStart = con.getChar();
-
 		//load game textfile
 		TextInputFile MCU = new TextInputFile("MCU.txt"); 
 		//Math Questions = MQ
@@ -28,11 +26,14 @@ public class CPTMatthiasS{
 		//con.fillRect(0,0,1280,720); 
 		//BufferedImage imglogo = con.loadImage("MClogo.png"); 
 		//con.drawImage(imglogo, 320, 100); 
+		con.println("1 Work");
 		while(true){
 			con.drawString("Play(P)",580,280); 
 			con.drawString("Leaderboard(L)",580,320); 
 			con.drawString("Add Quiz(A)",580,360);
 			con.drawString("Quiz(Q)",580,400); 
+			System.out.println("Work");
+			chrStart = con.getChar();
 			while(chrStart != 'p'|| chrStart != 'l'){
 				if(chrStart == 'p'){ 
 					System.out.println("Work");
