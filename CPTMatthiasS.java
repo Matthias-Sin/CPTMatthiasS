@@ -6,61 +6,50 @@ import java.awt.Font;
 
 public class CPTMatthiasS{ 
 	public static void main(String[] args){ 
-		Console con = new Console(1280,720);
-		//Create variables
-		int intX; 
-		int intY; 
+		Console con = new Console("The MC game",1280,720);
+		int intX = 580; 
 		char chrStart; 
-		String strMCU; 
-		String strAnswer; 
-		String strRespond;
-		
-		//load game textfile
-		TextInputFile MCU = new TextInputFile("MCU.txt"); 
-		//Math Questions = MQ
-		TextInputFile MQ = new TextInputFile("Math.txt"); 
-		TextInputFile Countries = new TextInputFile("Countries.txt"); 
-		//The secret game
-		TextInputFile secret = new TextInputFile("ItalianBrainrot.txt"); 
-		//con.setDrawColor(new Color(80, 0, 40)); 
-		//con.fillRect(0,0,1280,720); 
-		//BufferedImage imglogo = con.loadImage("MClogo.png"); 
-		//con.drawImage(imglogo, 320, 100); 
-		con.println("1 Work");
+		int intP = 0;
+		char chrselect; 
+		con.println(""); 
+		String strName; 
 		while(true){
-			con.drawString("Play(P)",580,280); 
-			con.drawString("Leaderboard(L)",580,320); 
-			con.drawString("Add Quiz(A)",580,360);
-			con.drawString("Quiz(Q)",580,400); 
+			con.drawString("Play(P)",intX,280); 
+			con.drawString("Leaderboard(L)",intX,320); 
+			con.drawString("Add Quiz(A)",intX,360);
+			con.drawString("Quiz(Q)",intX,400); 
 			System.out.println("Work");
-			chrStart = con.getChar();
+			chrStart = con.getChar(); 
 			while(chrStart != 'p'|| chrStart != 'l'){
-				if(chrStart == 'p'){ 
-					System.out.println("Work");
+				if(chrStart == 'p'){
+					con.setDrawColor(Color.BLACK);
+					con.fillRect(intX, 280, 200, 200); 
+					con.setDrawColor(Color.WHITE); 
+					con.clear();
+					con.println("What is your user name"); 
+					strName = con.readLine(); 
+					con.clear();
+					con.println("What game you want to play"); 
+					con.println("MCU(1)");
+					con.println("Math(2)");
+					con.println("Countries(3)"); 
+					con.println("Quit(Q)"); 
+					chrselect = con.getChar();
+					while(chrselect != '1'|| chrselect != '2' || chrselect !='3'||chrselect !='q'){
+						if(chrselect == '1'){ 
+							con.clear();
+							con.println("Welcome to MCU game"); 
+							return; 
+						}
+					break; 
+					
+				}
+				return; 
+				}
+				break;
 			}
 		}
 	}
-		//MCU game
-		//String StrQuestion;
-		//String StrA;
-		//String StrB;
-		//String StrC;
-		//String StrD;
-		//String Stranswer;
-		//while(MCU.eof() == false){ 
-			//StrQuestion = MCU.readLine(); 
-			//StrA = MCU.readLine(); 
-			//StrB = MCU.readLine(); 
-			//StrC = MCU.readLine();
-			//StrD = MCU.readLine(); 
-			//Stranswer = MCU.readLine(); 
-			//}
-		//strMCU = CPTmethod.MCUG(strAnswer, strRespond);
-		
-
-
-		
-		
-			
-	}
 }
+
+		
