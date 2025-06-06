@@ -3,10 +3,13 @@ import java.awt.Color;
 import java.awt.image.BufferedImage; 
 import java.awt.Font; 
 
-
 public class CPTMatthiasS{ 
 	public static void main(String[] args){ 
 		Console con = new Console("The MC game",1280,720);
+		TextInputFile MCU = new TextInputFile("MCU.txt"); 
+		TextInputFile MATH = new TextInputFile("Math.txt");
+		TextInputFile Countries = new TextInputFile("Countires.txt");
+		TextInputFile Suprise = new TextInputFile("ItalinBrainrot.txt"); 
 		int intX = 580; 
 		char chrStart; 
 		int intP = 0;
@@ -29,16 +32,18 @@ public class CPTMatthiasS{
 					con.println("What is your user name"); 
 					strName = con.readLine(); 
 					con.clear();
-					con.println("What game you want to play"); 
+					con.println("What game do you want to play"); 
 					con.println("MCU(1)");
 					con.println("Math(2)");
 					con.println("Countries(3)"); 
 					con.println("Quit(Q)"); 
 					chrselect = con.getChar();
+					
 					while(chrselect != '1'|| chrselect != '2' || chrselect !='3'||chrselect !='q'){
 						if(chrselect == '1'){ 
 							con.clear();
 							con.println("Welcome to MCU game"); 
+							
 							return; 
 						}
 					break; 

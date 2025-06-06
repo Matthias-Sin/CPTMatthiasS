@@ -57,7 +57,4 @@ A)1942
 B)2014
 C)1955
 D)2023
-E)A&B
-F)B&D
-G)Except C, all correct
 B
