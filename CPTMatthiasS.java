@@ -16,11 +16,15 @@ public class CPTMatthiasS{
 		char chrselect; 
 		con.println(""); 
 		String strName; 
+		String strAnswer; 
+		String strQuizFile;
+		String strQuiz; 
 		while(true){
 			con.drawString("Play(P)",intX,280); 
 			con.drawString("Leaderboard(L)",intX,320); 
 			con.drawString("Add Quiz(A)",intX,360);
 			con.drawString("Quiz(Q)",intX,400); 
+			con.repaint(); 
 			System.out.println("Work");
 			chrStart = con.getChar(); 
 			while(chrStart != 'p'|| chrStart != 'l'){
@@ -33,19 +37,16 @@ public class CPTMatthiasS{
 					strName = con.readLine(); 
 					con.clear();
 					con.println("What game do you want to play"); 
-					con.println("MCU(1)");
-					con.println("Math(2)");
-					con.println("Countries(3)"); 
-					con.println("Quit(Q)"); 
-					chrselect = con.getChar();
+					con.println("MCU.txt");
+					con.println("Math.txt");
+					con.println("Countries.txt"); 
+					con.println("Quit"); 
+					strQuizFile = con.readLine(); 
 					
-					while(chrselect != '1'|| chrselect != '2' || chrselect !='3'||chrselect !='q'){
-						if(chrselect == '1'){ 
-							con.clear();
-							con.println("Welcome to MCU game"); 
+
 							
-							return; 
-						}
+								
+
 					break; 
 					
 				}
@@ -55,6 +56,6 @@ public class CPTMatthiasS{
 			}
 		}
 	}
-}
+
 
 		

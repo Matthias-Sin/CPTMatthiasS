@@ -5,34 +5,34 @@ public class CPTmethod{
 		Console con = new Console(); 
 		
 	}
-	
-	public static String MCUG(String strRespond, String strAnswer){ 
-		//String strQnA[9][5];
-		TextInputFile MCU = new TextInputFile("MCU.txt"); 
-		String strQnA[][];
-		strQnA = new String[9][5];
-		int intQ = 0;
-		while(MCU.eof() == false){ 
-			strQnA[intQ][0] = MCU.readLine(); 
-			strQnA[intQ][1] = MCU.readLine();
-			strQnA[intQ][2] = MCU.readLine();
-			strQnA[intQ][3] = MCU.readLine();
-			strQnA[intQ][4] = MCU.readLine();
-			strQnA[intQ][5] = MCU.readLine();
-			intQ = intQ+1; 
+	public static int CountQ(String strQuizFile){
+		TextInputFile Quizfile = new TextInputFile(strQuizFile); 
+		int intcount = 0;
+		String strdata;
+		while(Quizfile.eof() == false){
+			strdata = Quizfile.readLine();
+			intcount = intcount + 1;
 		}
-		return strQnA[][]; 
+		Quizfile.close();
+		intcount = intcount / 6;
+		return intcount;
+	}
+	public static String[][] LoadGame(String strQuizFile, int intcount){ 
+		String strQuiz[][];
+		strQuiz = new String[intcount][5];
+		TextInputFile Quizfile = new TextInputFile(strQuizFile);
+		int intRow;
+		int intRand;
+		for(intRow = 0; intRow < intcount; intRow++){
+			strQuiz[intRow][0] = Quizfile.readLine();
+			strQuiz[intRow][1] = Quizfile.readLine();
+			strQuiz[intRow][2] = Quizfile.readLine();
+			strQuiz[intRow][3] = Quizfile.readLine();
+			intRand = (int)(Math.random()*100+1);
+			strQuiz[intRow][4] = intRand + "";
+			System.out.println(intRand);
+		}
+		Quizfile.close();
+		return strQuiz;	
 	}
 }
-		
-			
-			
-			
-		
-			
-			
-			
-		
-		
-		
-
