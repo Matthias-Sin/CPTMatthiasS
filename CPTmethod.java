@@ -17,7 +17,7 @@ public class CPTmethod{
 		intcount = intcount / 6;
 		return intcount;
 	}
-	public static String[][] LoadGame(String strQuizFile, int intcount){ 
+	public static String[][] LoadQuiz(String strQuizFile, int intcount){ 
 		String strQuiz[][];
 		strQuiz = new String[intcount][5];
 		TextInputFile Quizfile = new TextInputFile(strQuizFile);

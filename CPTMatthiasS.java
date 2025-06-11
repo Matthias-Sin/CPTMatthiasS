@@ -10,15 +10,17 @@ public class CPTMatthiasS{
 		TextInputFile MATH = new TextInputFile("Math.txt");
 		TextInputFile Countries = new TextInputFile("Countires.txt");
 		TextInputFile Suprise = new TextInputFile("ItalinBrainrot.txt"); 
+		TextInputFile Master = new TextInputFile("Master.txt");
 		int intX = 580; 
 		char chrStart; 
 		int intP = 0;
 		char chrselect; 
+		int intcount; 
 		con.println(""); 
 		String strName; 
 		String strAnswer; 
 		String strQuizFile;
-		String strQuiz; 
+		String strQuiz[][]; 
 		while(true){
 			con.drawString("Play(P)",intX,280); 
 			con.drawString("Leaderboard(L)",intX,320); 
@@ -27,7 +29,7 @@ public class CPTMatthiasS{
 			con.repaint(); 
 			System.out.println("Work");
 			chrStart = con.getChar(); 
-			while(chrStart != 'p'|| chrStart != 'l'){
+			while(chrStart != 'p'|| chrStart != 'l'|| chrStart != 'q'){
 				if(chrStart == 'p'){
 					con.setDrawColor(Color.BLACK);
 					con.fillRect(intX, 280, 200, 200); 
@@ -36,26 +38,37 @@ public class CPTMatthiasS{
 					con.println("What is your user name"); 
 					strName = con.readLine(); 
 					con.clear();
+					con.println("Welcome "+strName);
 					con.println("What game do you want to play"); 
 					con.println("MCU.txt");
 					con.println("Math.txt");
 					con.println("Countries.txt"); 
 					con.println("Quit"); 
 					strQuizFile = con.readLine(); 
+					con.clear(); 
+					con.println("Welcome to "+strQuizFile); 
+					intcount = CPTmethod.CountQ(strQuizFile); 
+					strQuiz = CPTmethod.LoadQuiz(strQuizFile, intcount);
 					
-
+					
+					
+					
 							
-								
-
-					break; 
+				}else if(chrStart =='q'){ 
 					
+
+					
+				
 				}
-				return; 
+
+
+					
+					
+					}
 				}
-				break;
 			}
 		}
-	}
+	
 
 
 		
