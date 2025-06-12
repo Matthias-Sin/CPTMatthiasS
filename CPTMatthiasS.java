@@ -6,15 +6,11 @@ import java.awt.Font;
 public class CPTMatthiasS{ 
 	public static void main(String[] args){ 
 		Console con = new Console("The MC game",1280,720);
-		//TextInputFile MCU = new TextInputFile("MCU.txt"); 
-		//TextInputFile MATH = new TextInputFile("Math.txt");
-		//TextInputFile Countries = new TextInputFile("Countries.txt");
-		//TextInputFile Suprise = new TextInputFile("ItalinBrainrot.txt"); 
-		//TextInputFile Master = new TextInputFile("Master.txt");
 		int intX = 580; 
 		char chrStart; 
 		int intP = 0;
 		char chrselect; 
+		char chrfunstuff;
 		int intcount; 
 		int intcount2;
 		int intAnswered;
@@ -48,7 +44,7 @@ public class CPTMatthiasS{
 			con.repaint(); 
 			System.out.println("Work");
 			chrStart = con.getChar(); 
-			
+			//Main game
 			if(chrStart == 'p'){
 				con.setDrawColor(Color.BLACK);
 				con.fillRect(intX, 280, 200, 200); 
@@ -107,7 +103,7 @@ public class CPTMatthiasS{
 					con.println(strQuiz[intcount2][4]);
 					strAnswer = con.readLine();
 					// Check answer
-					if (strAnswer.trim().equalsIgnoreCase(strQuiz[intcount2][5])) {
+					if(strAnswer.trim().equalsIgnoreCase(strQuiz[intcount2][5])) {
 						con.setDrawColor(Color.GREEN);
 						con.drawString("Correct!", 600, 300);
 						intAnswered++;
@@ -119,18 +115,9 @@ public class CPTMatthiasS{
 					// small pause before next question
 					con.sleep(500);
 					}
-
+					
 				
-				
-				
-				
-				
-				
-
-				
-
-				
-			
+			//Add quiz
 			}else if(chrStart == 'a'){ 
 				con.setDrawColor(Color.BLACK);
 				con.fillRect(intX, 280, 200, 200); 
@@ -178,11 +165,43 @@ public class CPTMatthiasS{
 						con.clear();
 						
 					}
-					}
+				}
 				
-			
+			//Quit
 			}else if(chrStart == 'q'){ 
-				con.closeWindow(); 
+				con.setDrawColor(Color.BLACK);
+				con.fillRect(intX, 280, 200, 200); 
+				con.setDrawColor(Color.WHITE); 
+				con.clear();
+				con.println("You sure you want to quit?"); 
+				con.println("Yes(Y)");
+				con.println("No(any key)"); 
+				chrfunstuff = con.getChar();
+				if(chrfunstuff == 'y'){ 
+					con.println("ok bye bye");
+					con.sleep(3000); 
+					con.closeWindow(); 
+				}else{
+					blnMoreanswer = false; 
+				}
+			}else if(chrStart == 'l'){ 
+				
+				
+			//secret fun stuff	
+			}else if(chrStart == 's'){
+				con.setDrawColor(Color.BLACK);
+				con.fillRect(intX, 280, 200, 200); 
+				con.setDrawColor(Color.WHITE); 
+				con.clear();
+				con.println("welcome");
+				con.sleep(2000);
+				con.clear();
+				con.println("You want me to tell a joke?"); 
+				con.sleep(2000); 
+				con.clear();
+				con.println("The Multiple choice game is designed for 35mins, if you working plan calls for double time or extra time, you may have it. ");
+				con.sleep(5000);
+				con.println("you will get it if you know it"); 
 			}
 
 
