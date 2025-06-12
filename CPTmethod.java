@@ -19,7 +19,7 @@ public class CPTmethod{
 	}
 	public static String[][] LoadQuiz(String strQuizFile, int intcount){ 
 		String strQuiz[][];
-		strQuiz = new String[intcount][5];
+		strQuiz = new String[intcount][7];
 		TextInputFile Quizfile = new TextInputFile(strQuizFile);
 		int intRow;
 		int intRand;
@@ -28,11 +28,28 @@ public class CPTmethod{
 			strQuiz[intRow][1] = Quizfile.readLine();
 			strQuiz[intRow][2] = Quizfile.readLine();
 			strQuiz[intRow][3] = Quizfile.readLine();
+			strQuiz[intRow][4] = Quizfile.readLine();
+			strQuiz[intRow][5] = Quizfile.readLine();
 			intRand = (int)(Math.random()*100+1);
-			strQuiz[intRow][4] = intRand + "";
+			strQuiz[intRow][6] = intRand + "";
 			System.out.println(intRand);
 		}
 		Quizfile.close();
 		return strQuiz;	
+	}
+	public static String[][] BubbleShort(String strQuiz[][], int intcount){
+		String strTemp;
+		for(int intpass = 0; intpass < intcount - 1; intpass++){
+			for(int introw = 0; introw < intcount - 1 - intpass; introw++){
+				if(Integer.parseInt(strQuiz[introw][6]) > Integer.parseInt(strQuiz[introw+1][6])){
+					for(int intcolumn = 0; intcolumn < 7; intcolumn++){
+						strTemp = strQuiz[introw][intcolumn];
+						strQuiz[introw][intcolumn] = strQuiz[introw+1][intcolumn];
+						strQuiz[introw+1][intcolumn] = strTemp;
+					}
+				}
+			}
+		}
+		return strQuiz;
 	}
 }
