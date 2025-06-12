@@ -3,7 +3,7 @@ import java.awt.Color;
 import java.awt.image.BufferedImage; 
 import java.awt.Font; 
 
-public class CPTMatthiasS{ 
+public class CPTtesting{ 
 	public static void main(String[] args){ 
 		Console con = new Console("The MC game",1280,720);
 		int intX = 580; 
@@ -29,7 +29,6 @@ public class CPTMatthiasS{
 		String strQuestionsCount;
 		String strAnswered;
 		String strAvg;
-		String strLeader[][];
 		boolean blnMoreanswer;
 		boolean blnGame;
 		blnMoreanswer = true;
@@ -68,14 +67,13 @@ public class CPTMatthiasS{
 				intcount = CPTmethod.CountQ(strQuizFile); 
 				strQuiz = CPTmethod.LoadQuiz(strQuizFile, intcount);
 				strQuiz = CPTmethod.BubbleShort(strQuiz, intcount);
-				
 				//Changing stuffs
 				blnGame = true;
 				intAnswered = 0;
 				intAvg = 0;
 				for (intcount2 = 0; intcount2 < strQuiz.length; intcount2++){
 					con.setDrawColor(Color.BLACK);
-					con.fillRect(0,0,1289,720);
+					con.fillRect(0,0,1279,720);
 					con.clear();
 					con.setDrawColor(Color.WHITE);
 					// Display quiz name and username
@@ -116,13 +114,14 @@ public class CPTMatthiasS{
 					// small pause before next question
 					con.sleep(500);
 					}
-					TextOutputFile LeaderBoard = new TextOutputFile("LeaderBoard.txt",true); 
-					LeaderBoard.println(strQuizFile);
-					LeaderBoard.println(strName); 
-					LeaderBoard.println(intAnswered); 
-					LeaderBoard.println(intAvg); 
-					LeaderBoard.close(); 
-					con.getChar(); 
+				TextOutputFile LeaderBoard = new TextOutputFile("LeaderBoard.txt",true); 
+				LeaderBoard.println(strQuizFile);
+				LeaderBoard.println(strName); 
+				LeaderBoard.println(intAnswered); 
+				LeaderBoard.println(intAvg); 
+				LeaderBoard.close(); 
+				con.getChar(); 
+				
 					
 				
 			//Add quiz
@@ -187,27 +186,14 @@ public class CPTMatthiasS{
 				chrfunstuff = con.getChar();
 				if(chrfunstuff == 'y'){ 
 					con.println("ok bye bye");
-					con.sleep(1000); 
+					con.sleep(3000); 
 					con.closeWindow(); 
 				}else{
 					blnMoreanswer = false; 
 				}
-			}else if(chrStart =='l'){ 
-				intcount = CPTmethod.CountL(); 
-				strLeader = CPTmethod.LoadLeaderBoard(intcount); 
-				strLeader = CPTmethod.LeaderBoardShort(strLeader, intcount);
-				for(intcount2 = 0; intcount2 < strLeader.length; intcount2++){
-					con.setDrawColor(Color.BLACK);
-					con.fillRect(0,0,1280,720);
-					con.clear();
-					con.setDrawColor(Color.WHITE);
-					con.println("Game: "+strLeader[intcount2][0]);
-					con.println("Player: "+strLeader[intcount2][1]);
-					con.println("Total mark: "+strLeader[intcount2][2]);
-					con.println("Mark in %: "+strLeader[intcount2][3]);
-					con.println("\n");
-				}
-				con.getChar(); 
+			}else if(chrStart == 'l'){ 
+				
+				
 			//secret fun stuff	
 			}else if(chrStart == 's'){
 				con.setDrawColor(Color.BLACK);

@@ -2,4 +2,3 @@ MCU.txt
 Math.txt
 Countries.txt
 ItalinBrainrot.txt
-Test.txt

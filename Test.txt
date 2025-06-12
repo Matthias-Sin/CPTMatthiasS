@@ -3,3 +3,8 @@ B.2
 C.3
 D.0
 d
+hi
+hello
+bonjour
+Bruh
+A

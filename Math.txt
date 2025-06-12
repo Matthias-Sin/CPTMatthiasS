@@ -3,6 +3,58 @@ A)2
 B)3
 C)180
 D)-3
-B 
-
-
+B
+What is the square root of 81?
+A)7
+B)8
+C)9
+D)10
+C
+What is 15% of 200?
+A)25
+B)30
+C)35
+D)40
+B
+If x = 3, what is the value of 2x² + 1?
+A)17
+B)18
+C)19
+D)21
+A
+What is the next prime number after 19?
+A)21
+B)23
+C)25
+D)27
+B
+Simplify: (3x + 4x)
+A)6x
+B)7x
+C)8x
+D)9x
+B
+What is the area of a rectangle with length 5 and width 3?
+A)8
+B)10
+C)15
+D)18
+C
+What is 100 divided by 4?
+A)20
+B)25
+C)30
+D)35
+B
+How many degrees are in a right angle?
+A)45
+B)90
+C)180
+D)360
+B
+What is the value of π (pi) rounded to 2 decimal places?
+A)3.12
+B)3.14
+C)3.16
+D)3.18
+B
